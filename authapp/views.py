@@ -19,14 +19,11 @@ def dashboard(request):
 
 def register(request):
     if request.method == 'POST':
-        #thisSA = secureAuth()
-
         form = UserRegistration(request.POST or None)
         if form.is_valid():
             new_user = form.save(commit=False)
             new_user.set_password(
-                form.cleaned_data.get('password') # integrat pass #
-                #thisSA.getEffectivePass(gotPass, dob, fpPath)
+                form.cleaned_data.get('password')
             )
             new_user.save() # goes in db
             return render(request, 'authapp/register_done.html')

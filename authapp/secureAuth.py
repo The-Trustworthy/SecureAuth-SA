@@ -81,8 +81,6 @@ class dataProcessor:
   
   __mapToSingleDigit = mapToSingleDigit
   __getNumericStr = getNumericStr
-  
-
 
 #########################
 #########################
@@ -100,10 +98,15 @@ class secureAuth(dataProcessor):
 
   ############
 
-  def getEffectivePass(self, passw: str, DoB: str, fpData: str):
+  def getEffectivePass(self, passw: str, DoB=False, fpData==False):
+    if not DoB:
+      DoB = "17/08/1997"      
     ## pre processing
     DoB = self.processDOB(DoB)
-    fpData = self.processBiometric(fpData)
+    if fpData:
+      fpData = self.processBiometric(fpData)
+    else:
+      fpData = "c44606cd2a6f9de10a539dcf25a6ddb658390d8d670e365d3ef7f904195c1491"
     passw = self.processPass(passw)
     ## hex value
     DoB = self.__getHexInt(DoB)
