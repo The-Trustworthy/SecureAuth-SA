@@ -4,6 +4,8 @@ from django import forms
 from django.contrib.auth.forms import AuthenticationForm, UsernameField
 from .models import UserRegistrationModel
 from django.contrib.auth.forms import PasswordResetForm
+#########
+# integrat pass #
 
 
 class UserRegistration(forms.ModelForm):
@@ -19,7 +21,7 @@ class UserRegistration(forms.ModelForm):
             cd = self.cleaned_data
             if cd['password'] != cd['password2']:
                 raise forms.ValidationError('Passwords don\'t match.')
-            return cd['password2']
+            return cd['password2']  # integrat pass #
 
 
 class UserEditForm(forms.ModelForm):
