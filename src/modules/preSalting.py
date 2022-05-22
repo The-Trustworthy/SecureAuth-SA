@@ -70,7 +70,7 @@ class preSalting:
       passNumStr = self.__getNumericStr(password)
       passNumHash = self.__getSHA256(passNumStr)
     except:
-      print("Invalid DoB!!")
+      print("Invalid Password!!")
       passNumHash = False
     finally:
       return passNumHash
