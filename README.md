@@ -17,7 +17,7 @@
 > * Submitted for [NetScout Cyberathon](https://www.starhacks.org/apr2022-netscout-cyberathon)  
 > * Won 2nd prize in advance level of challenges  
 > * I contributed by providing a novel cryptographic mechanism  
-> * 24hrs. collective effort _CyberKnight_ - a team of 4 members  
+> * 24hrs. collective effort by _CyberKnight_ - a team of 4 members  
 
 ## Intro 🧩  
 Today’s Internet has been twisted and contorted to use authentication and session management, essentially breaking both. The most common authentication attack uses a proxy-based attack tool (`BurpSuite`’s Intruder, for example) to brute force the login credentials of a legitimate user.  
