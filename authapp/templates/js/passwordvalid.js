@@ -1,14 +1,18 @@
 function validatePassword() {
-    var newPassword = document.getElementById('changePasswordForm').newPassword.value;
-    var minNumberofChars = 6;
-    var maxNumberofChars = 16;
-    var regularExpression  = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
-    alert(newPassword); 
-    if(newPassword.length < minNumberofChars || newPassword.length > maxNumberofChars){
+    var p = document.getElementById('newPassword').value,
+        errors = [];
+    if (p.length < 8) {
+        errors.push("Your password must be at least 8 characters"); 
+    }
+    if (p.search(/[a-z]/i) < 0) {
+        errors.push("Your password must contain at least one letter.");
+    }
+    if (p.search(/[0-9]/) < 0) {
+        errors.push("Your password must contain at least one digit."); 
+    }
+    if (errors.length > 0) {
+        alert(errors.join("\n"));
         return false;
     }
-    if(!regularExpression.test(newPassword)) {
-        alert("password should contain atleast one number and one special character");
-        return false;
-    }
+    return true;
 }
