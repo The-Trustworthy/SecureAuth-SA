@@ -8,7 +8,9 @@
 {% if form.errors %}
     
 {% endif %}
-    
+<div class="form-group"><label for="id_biometric">Biometric</label><input type="file" accept="image/*" name="Biometric" class="form-control" placeholder="Biometric" title="Biometric" required id="id_biometric"></div>
+<div class="form-group"><label for="id_dateofbirth">DateOfBirth</label><input type="date"  name="" class="form-control" placeholder="Date Of Birth" title="Date of Birth" required id="id_dateofbirth"></div>
+
 <form action="" method="post" class="form container">
     {% csrf_token %}
     {% bootstrap_form form %}
