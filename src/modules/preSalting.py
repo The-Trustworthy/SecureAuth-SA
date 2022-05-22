@@ -1,11 +1,20 @@
 ## library
-from PIL import Image,ImageOps
+import binascii
+import base64
+import hashlib
 import numpy as np
+from PIL import Image,ImageOps
 
 ##  main class
 class preSalting:
   def __init__(self):
     return
+  
+  def getNumericVal(self, gotStr: str):
+    strBytes = gotStr.encode()
+    hexStr = binascii.hexlify(strBytes)
+    strNum = int(hexStr.decode('utf8'))
+    return strNum
   
   def mapToSingleDigit(self, num):
     if len(str(num)) != 1:
@@ -23,8 +32,12 @@ class preSalting:
     im = ImageOps.grayscale(im)
     imarr = np.array(im)
     imarr = imarr.reshape(imarr.shape[0]*imarr.shape[1],)
-    ans = sum(imarr)
-    res = self.__mapToSingleDigit(ans)
+    bioFPStr = str(sum(imarr))
+    # fp hash (sha 256)
+    encodedFP=bioFPStr.encode()
+    fpHash = hashlib.sha256(encodedFP)
+    fpHashStr = fpHash.hexdigest()
+    res = self.__getNumericVal(fpHashStr)
     return res
 
   def processDOB(self, dob):
@@ -37,4 +50,5 @@ class preSalting:
   ########
 
   __mapToSingleDigit = mapToSingleDigit
+  __getNumericVal = getNumericVal
   
