@@ -19,7 +19,7 @@
 > * I contributed by providing a novel cryptographic mechanism  
 > * 24hrs. collective effort by _CyberKnight_ - a team of 4 members  
 
-## Intro 🧩  
+## Requirements 🧩  
 Today’s Internet has been twisted and contorted to use authentication and session management, essentially breaking both. The most common authentication attack uses a proxy-based attack tool (`BurpSuite`’s Intruder, for example) to brute force the login credentials of a legitimate user.  
 
 ## What's crazy about SA? 🤯  
