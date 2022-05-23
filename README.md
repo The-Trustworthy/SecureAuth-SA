@@ -15,8 +15,7 @@
 
 ## Quick Overview 💨  
 > * Submitted for [NetScout Cyberathon](https://www.starhacks.org/apr2022-netscout-cyberathon)  
-> * Won 2nd prize in advance level of challenges  
-> * I contributed by providing a novel cryptographic mechanism  
+> * Won 2nd prize in advance level of challenges   
 > * 24hrs. collective effort by _CyberKnight_ - a team of 4 members  
 
 ## Requirements 🧩  
