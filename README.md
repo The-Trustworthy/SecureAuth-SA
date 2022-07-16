@@ -36,4 +36,4 @@ Today’s Internet has been twisted and contorted to use authentication and sess
 1. [Ravi Prakash](https://ravi-prakash1907.gitlab.io/)  
 2. Ishi Saxena  
 3. [Aaqib Shaikh](https://github.com/Aaqib29/)  
-4. [Md. Tauheed](https://github.com/mohammedtouheedpatelgithubcom)  
+4. [Mohammed Touheed Patel](https://github.com/mohammedtouheedpatelgithubcom)  
